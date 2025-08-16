@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  max-width: auto;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #282520;
+  padding: 0 20px;
+  width: 120%;
+}
+
+.topnav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: rgb(1, 94, 38);
+  color: #fff;
+}
+
+.header {
+  grid-area: header;
+  background-color: #32493f;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 5fr 1fr; 
+  grid-template-areas:
+    "header header"
+    "topnav topnav"
+    "left middle"
+    "footer footer";
+}
+.left,
+.middle {
+  padding: 10px;
+  height: 800px;
+}
+.left {
+  grid-area: left;
+}
+
+.middle {
+  grid-area: middle;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #ededed;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-areas:
+      "header header header header header header"
+      "topnav topnav topnav topnav topnav topnav"
+      "left left left left left left"
+      "middle middle middle middle middle middle"
+      "footer footer footer footer footer footer";
+  }
+}
+
+body {
+  background-color: #ffffff; 
+  font-family: Arial, sans-serif;
+}
+
+.Menu a {
+  display: block;
+  background-color: #333; 
+  color: white; 
+  padding: 8px 10px;
+  margin: 8px 0;
+  text-decoration: none;
+  border-radius: 4px; 
+}
+
+a:hover {
+  background-color: #555; 
+}
+
+table {
+  font-family: poppins, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  font-size: 14px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:not(:first-child):not(.underline):hover {
+  background-color: #f1f1f1;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+
+iframe {
+  width: 500px;
+  height: 300px;
+  border: 0;
+}
+
+input :not(.SearchIn){
+  width: 350px;
+  height: 35px;
+}
+
+button :not(.BtnGo) {
+  width: 350px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto; 
+}
+
+.SearchIn {
+  padding: 6px 12px;
+  border-radius: 6px 0 0 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 180px;
+}
+
+.BtnGo {
+  padding: 6px 12px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 0 6px 6px 0; 
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.BtnGo:hover {
+  background-color: #45a049;
+}
